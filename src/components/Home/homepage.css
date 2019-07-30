@@ -1,0 +1,62 @@
+/* Style definition for the home page */
+
+.homePage{
+  margin-top: 4em;
+}
+
+.workOrder{
+    /* position: relative; */
+    display: inline-block;
+    /* border: solid #0000ff; */
+    width:  38em;
+    height: 28em;
+    margin-block-end: 10em;
+    margin-inline-end: 7em;
+    margin-inline-start: 3em;
+}
+#parentDiv{
+    /* border: solid orange; */
+}
+#parentDiv1{
+    /* border: solid purple; */
+    position: absolute;
+    top: 11em;
+}
+
+.workerDetail {
+    /* border: solid yellow; */
+    height: 17.2em;
+    width: 33em;
+    display: inline-block;
+    -webkit-margin-after: 10em;
+    margin-block-end: 10em;
+    margin-inline-end: 11em;
+    margin-inline-start: 4em;
+    margin-top: 10.5em;
+    /* margin-left: 10em; */
+    
+}
+.info{
+    width: 20em;
+    text-align: left;
+    position: relative;
+    bottom: 7em;
+    left: 15em;
+}
+.img{
+   position: relative;
+   top: 2.5em;
+}
+.descrip{
+    width: 20em;
+    text-align: left;
+    margin-left: 11em;
+}
+
+/* Workers information display styling */
+/* .workerDetail{
+    border: solid yellow;
+    height: 19em;
+    width:  38em;
+ 
+} */

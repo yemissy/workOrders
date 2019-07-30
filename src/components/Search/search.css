@@ -1,0 +1,16 @@
+/* Search bar styling */
+.Button{
+    position: relative;
+    bottom: 1em;
+}
+.toggle{
+    position: relative;
+    top: 1.5em;
+    display: inline;
+    padding:  5em;
+}
+.ui.input {
+    position: relative;
+    width: 40em;
+    left: 17em; 
+}

@@ -1,0 +1,24 @@
+/* Worker Component Styling */
+
+.worker{
+    border: solid red;
+    height: 19.5em;
+    width:  38em;
+}
+/* #parentDiv{
+    border: solid orange;
+}
+#parentDiv1{
+    border: solid blue;
+} */
+
+/* .workerDetail{
+    border: solid yellow;
+    height: 19em;
+    width:  38em;
+    display: inline-block; */
+    /* position: relative;
+    margin-block-end: 10em;
+    margin-inline-end: 5em;
+    bottom: 100em; */
+/* } */

@@ -99,7 +99,7 @@ class App extends Component {
       <div className="App">
   
         <header className="App-header">
-          <p>
+          <p id="welcome">
            Welcome to my Work Order App
           </p>
           <SearchBar 

@@ -1,6 +1,8 @@
 .App {
   text-align: center;
-  border: solid green;
+}
+#welcome{
+  font-size: 2em;
 }
 
 

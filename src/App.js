@@ -54,7 +54,6 @@ class App extends Component {
         searchedWorker: ""
       }
     })
-    console.log(this.state.searchedWorker)
   }
 
   async getOrders () {

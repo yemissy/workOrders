@@ -16,22 +16,20 @@
 }
 .workerDetail{
     background-color: antiquewhite;
-    border: 0.16em solid burlywood;
     border-radius: 2em;
     width: 45em;
     height: 27em;
     margin: auto;
     margin-block-start: 2em;
     margin-inline-start: 1.6em;
-    border: solid black;
+    border: 0.1em solid black;
 }
-.img{
+.ui.small.image{
     position: relative;
     top: 0.7em;
     left: 0.7em;
-    border: solid red;
     width: 8em;
-    height: 6em;
+    height: 8em;
 }
 .info{
     width: 20em;
@@ -50,6 +48,7 @@
     position: relative;
     left: 8em;
     overflow: auto;
+
 }
 
 .singleOrder{

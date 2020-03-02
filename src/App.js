@@ -9,7 +9,7 @@ import Data from './components/Data/Data';
 
 const BASE_URL = "https://www.hatchways.io/api/assessment"
 const WORKER_URL = "https://www.hatchways.io/api/assessment/workers"
-// const API_KEY=process.env.REACT_APP_API_KEY
+
 const AVATAR_URL =  "https://api.unsplash.com/collections/9622127/photos?client_id=c80e91a61ca21927bb319d90e5e6c422641af5bd4a6f3fa66a17efacad6e0684"
 
 let workersData = []
@@ -22,39 +22,39 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      workers: [
-        {
-          id: "",
-          name: "",
-          companyName: "",
-          email: "",
-          image: [],
-          work_orders: []
-        },
-        {
-          actualImages: []
-        }
-      ]
+      workers:{
+        id: "",
+        name: "",
+        companyName: "",
+        email: "",
+        image: [],
+        work_orders: []
+      },
+      search:{
+        input: '',
+        searchedWorker: []
+      }
     }
   }
 
   handleInputChange = (e) => {
     const {value} = e.target
-    this.setState( prevState => ({
-      search: {
-        ...prevState.search, 
-        text: value
-      }
-    }))
-    console.log(value)
+    this.setState({
+          search: { 
+            input: value,
+          }
+        })
+  console.log(value, this.state.search.searchedWorker)
   }
 
-  handleResultSelect = (e) => {
-    console.log(this.state.search.text)
-    this.setState(prevState => ({
-      results: this.state.workers.filter(worker => worker.name === this.state.value)
-    }))
-    console.log(this.state.results)
+  handleResultSelect = () => {
+    console.log(this.state.search.input)
+    this.setState({
+      search:{
+        searchedWorker: ""
+      }
+    })
+    console.log(this.state.searchedWorker)
   }
 
   async getOrders () {
@@ -101,47 +101,38 @@ class App extends Component {
     }).catch(error => {
       return error
     })
-    console.log(avatar)
     return avatar
   }
   
   async componentDidMount(){
     await this.getWorkers()
     await this.getAvatar()
-    console.log(avatar)
     this.addStateData()
     localStorage.setItem('avatar', JSON.stringify(avatar))
     localStorage.setItem('ordersData', JSON.stringify(ordersData))
-    console.log(Data[0])
   }
 
   //write a function to update state and call that function in component did mount
 
   addStateData = () => {
       this.setState({
-        workers:[ Data[0].map((worker, i)  => (
+        workers:Data[0].map((worker, )  => (
           {
             id: worker.id,
             name: worker.name,
             companyName: worker.companyName,
             email: worker.email,
-            image: Data[0][i].image = Data[1].map((img, index) => {return Data[1][index].urls.thumb}),
+            image: Data[1],
             work_orders: Data[2].filter(order => order.workerId === worker.id)
           }
-        )),
-        {
-          actualImages: Data[1]
-        },
-        ]
+        ))
       })
-      console.log(this.state.workers[0][0].image)
   }
 
 
   render(){
     return (
       <div className="App">
-  
         <header className="App-header">
           <p id="welcome">
            Welcome to my Work Order App
@@ -149,6 +140,7 @@ class App extends Component {
           <SearchBar 
           handleChange={this.handleInputChange}
           handleSelect={this.handleResultSelect}
+          value={this.state.search.input}
           />
           <Homepage 
             workers = {this.state.workers}
@@ -157,7 +149,6 @@ class App extends Component {
       </div>
     );
   }
-
 }
 
 export default App;

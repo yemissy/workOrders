@@ -6,7 +6,7 @@ import './search.css'
 export default function searchBar(props){
     return(
         <div className ="SearchBar">
-            <Search size="small"  onSearchChange={props.handleSelect}/>
+            <Search size="small"  onSearchChange={props.handleChange} value={props.value} />
             <div className ="Buttons">
                 <Button.Group>
                     <Button attached="left" toggle>Earliest</Button>

@@ -2,61 +2,68 @@
 
 .homePage{
   margin-top: 4em;
+  margin: 0.3em;
 }
 
-.workOrder{
-    /* position: relative; */
-    display: inline-block;
-    /* border: solid #0000ff; */
-    width:  38em;
-    height: 28em;
-    margin-block-end: 10em;
-    margin-inline-end: 7em;
-    margin-inline-start: 3em;
-}
 #parentDiv{
-    /* border: solid orange; */
-}
-#parentDiv1{
-    /* border: solid purple; */
-    position: absolute;
-    top: 11em;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid yellow; */
 }
 
-.workerDetail {
-    /* border: solid yellow; */
-    height: 17.2em;
-    width: 33em;
-    display: inline-block;
-    -webkit-margin-after: 10em;
-    margin-block-end: 10em;
-    margin-inline-end: 11em;
-    margin-inline-start: 4em;
-    margin-top: 10.5em;
-    /* margin-left: 10em; */
-    
+#parentDiv1{
+    border: solid green;
+}
+.workerDetail{
+    background-color: antiquewhite;
+    border: 0.16em solid burlywood;
+    border-radius: 2em;
+    width: 45em;
+    height: 27em;
+    margin: auto;
+    margin-block-start: 2em;
+    margin-inline-start: 1.6em;
+    border: solid black;
+}
+.img{
+    position: relative;
+    top: 0.7em;
+    left: 0.7em;
+    border: solid red;
+    width: 8em;
+    height: 6em;
 }
 .info{
     width: 20em;
     text-align: left;
     position: relative;
-    bottom: 7em;
-    left: 15em;
-}
-.img{
-   position: relative;
-   top: 2.5em;
-}
-.descrip{
-    width: 20em;
-    text-align: left;
-    margin-left: 11em;
+    top: 1.5em;
+    left: 0.6em;
 }
 
-/* Workers information display styling */
-/* .workerDetail{
-    border: solid yellow;
-    height: 19em;
-    width:  38em;
- 
-} */
+.WokersWorkOrders{
+    width: 24em;
+    height: 25em;
+    margin: auto;
+    margin-inline-end: 9em;
+    margin-block-start: -19em;
+    position: relative;
+    left: 8em;
+    overflow: auto;
+}
+
+.singleOrder{
+    border: 0.1em solid black;
+    border-radius: 0.3em;
+    background-color:white;
+    box-shadow: 0em 0em 0.6em 0.1em coral;
+    text-align: left;
+    width: 22em;
+    height: 14em;
+    padding: 0.5em;
+    margin: auto;
+    margin-block-start: 1em;
+    margin-inline-start: 0.5em;
+    
+}
+

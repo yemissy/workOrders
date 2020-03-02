@@ -6,12 +6,13 @@ import './search.css'
 export default function searchBar(props){
     return(
         <div className ="SearchBar">
-            <Search size="big" onSearchChange={props.handleChange} onSearchChange={props.handleSelect}/>
-            <h5 className ="toggle">Earliest First</h5>
-            <h5 className ="toggle">Latest First</h5>
-            <div className = "Button">
-                <Button attached="left" toggle></Button>
-                <Button attached="right" toggle></Button>
+            <Search size="small"  onSearchChange={props.handleSelect}/>
+            <div className ="Buttons">
+                <Button.Group>
+                    <Button attached="left" toggle>Earliest</Button>
+                    <Button.Or/>
+                    <Button attached="right" toggle>Latest </Button>
+                </Button.Group>
             </div>
         </div>
     )

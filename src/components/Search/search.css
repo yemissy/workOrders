@@ -1,16 +1,27 @@
 /* Search bar styling */
-.Button{
-    position: relative;
-    bottom: 1em;
+
+.SearchBar{
+    height: 4em;
 }
-.toggle{
-    position: relative;
-    top: 1.5em;
-    display: inline;
-    padding:  5em;
+.Buttons{
+    position: absolute;
+    top: 5.4em;
+    left: 9em;
+}
+.ui.buttons .or {
+    padding: 0.2em;
+    margin: 0.2em;
+}
+.ui.search{
+    position: absolute;
+    right: 18em;
+    top: 6em;
 }
 .ui.input {
     position: relative;
     width: 40em;
     left: 17em; 
+}
+.ui.search .prompt{
+    border: 0.2em solid burlywood;
 }

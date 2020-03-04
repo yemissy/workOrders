@@ -10,8 +10,9 @@ export default function searchBar(props){
             loading={props.loading} 
             onSearchChange={props.handleChange} 
             value={props.value} 
-            results={props.Searchresults} 
+            results={props.Searchresults}
             />
+             <h5 id="prompt">Search employee's name</h5>
              {/* Work on Buttons sorting later */}
             <div className ="Buttons">
                 <Button.Group>

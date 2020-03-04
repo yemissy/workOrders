@@ -14,8 +14,8 @@
     border: solid green;
 }
 .workerDetail{
-    background-color: #FFE1E3;
-    box-shadow: 0.2em 0.2em 1em 0em white;
+    background-color: white;
+    box-shadow: 0.2em 0.2em 1em 0em rgb(141, 52, 52);
     border-radius: 0.2em;
     width: 45em;
     height: 27em;
@@ -23,12 +23,17 @@
     margin-inline-start: 2em;
     
 }
+.workerDetail:hover{
+    box-shadow: 0.2em 0.2em 1em 0em rgb(252, 255, 52);
+}
+
 .ui.small.image{
     position: relative;
     top: 0.7em;
     left: 0.7em;
     width: 8em;
     height: 8em;
+    border: 0.1em solid yellow;
 }
 .info{
     width: 20em;
@@ -53,7 +58,7 @@
 
 .singleOrder{
     border-radius: 1em;
-    background-color:white;
+    background-color: palevioletred;
     box-shadow: 0em 0em 0.6em 0.1em rgb(152, 146, 148);
     text-align: left;
     width: 22em;

@@ -2,6 +2,7 @@
   background-image: url('./images/background3.jpg');
   background-size: cover;
   background-attachment: fixed;
+  height: 100%;
 }
 #welcome{
   font-size: 2.5em;

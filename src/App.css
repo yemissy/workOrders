@@ -1,6 +1,6 @@
 .App {
   background-image: url('./images/background3.jpg');
-  background-size: contain;
+  background-size: cover;
 }
 #welcome{
   font-size: 2.5em;

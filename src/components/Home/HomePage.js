@@ -5,28 +5,32 @@ import { Image  } from 'semantic-ui-react'
 
 
 export default function HomePage(props){
-    console.log(props.workers)
     const workersStack = []
     const ids = []
     let top = 0;
 
-    const returnUniqueWorkers = () => {
-        for(let i = 0; i < props.workers.length; i++){
+    const returnUniqueWorkers = (arr) => {
+        for(let i = 0; i < arr.length; i++){
           if(workersStack.length !== 0){
-              if(ids.includes(props.workers[i].id)){
+              if(ids.includes(arr[i].id)){
                   continue
               }else{
-                  workersStack[top++] = props.workers[i] 
+                  workersStack[top++] = arr[i] 
                   ids.push(workersStack[top -1].id)
               }
           }else{
-              workersStack[top++] = props.workers[i]
+              workersStack[top++] = arr[i]
               ids.push(workersStack[top -1].id)
           }
         }
     }
-    returnUniqueWorkers() 
+    returnUniqueWorkers(props.workers) 
 
+    const handleInputChange1 = () => {
+        props.handleChange1(workersStack)
+    }
+
+    handleInputChange1()
     return(
         <div className ="homePage">
             <div id="parentDiv" > 

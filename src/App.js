@@ -16,6 +16,7 @@ let workersData = []
 let workersIds = []
 let ordersData;
 let avatar;
+let potentialMatches;
 
 
 class App extends Component {
@@ -27,34 +28,24 @@ class App extends Component {
         name: "",
         companyName: "",
         email: "",
-        image: [],
-        work_orders: []
+        image: "",
+        work_orders: [],
+        img_id: ""
       },
       search:{
         input: '',
-        searchedWorker: []
+        searchResults: [
+          {
+            title: "",
+            key: "",
+            image: ""
+          }
+        ],
+        loading: false
       }
     }
   }
 
-  handleInputChange = (e) => {
-    const {value} = e.target
-    this.setState({
-          search: { 
-            input: value,
-          }
-        })
-  console.log(value, this.state.search.searchedWorker)
-  }
-
-  handleResultSelect = () => {
-    console.log(this.state.search.input)
-    this.setState({
-      search:{
-        searchedWorker: ""
-      }
-    })
-  }
 
   async getOrders () {
     await axios.get(`${BASE_URL}/work_orders`)
@@ -115,17 +106,38 @@ class App extends Component {
 
   addStateData = () => {
       this.setState({
-        workers:Data[0].map((worker, )  => (
+        workers:Data[0].map((worker, index )  => (
           {
             id: worker.id,
             name: worker.name,
             companyName: worker.companyName,
             email: worker.email,
             image: Data[1],
-            work_orders: Data[2].filter(order => order.workerId === worker.id)
+            work_orders: Data[2].filter(order => order.workerId === worker.id),
           }
         ))
       })
+  }
+
+  handleInputChange = (e) => {
+    const {value} = e.target
+    let regexp = new RegExp((value), "i") //convert value to reg expression pattern for string matching
+    let matches = potentialMatches.filter(worker => worker.name.match(regexp))
+    this.setState({
+      search:{
+        input: value,
+        searchResults: matches.map((match, index )=> ({
+          title: match.name,
+          key: match.id,
+          image:match.image[potentialMatches.indexOf(match)].urls.small
+        }))
+      }
+    })
+  }
+
+  //Recieve uniquely filtered matches
+  recieveMatches = (data) => {
+    potentialMatches = data
   }
 
 
@@ -134,15 +146,17 @@ class App extends Component {
       <div className="App">
         <header className="App-header">
           <p id="welcome">
-           Welcome to my Work Order App
+           Work Order App
           </p>
           <SearchBar 
           handleChange={this.handleInputChange}
-          handleSelect={this.handleResultSelect}
           value={this.state.search.input}
-          />
+          Searchresults={this.state.search.searchResults}
+          loading={this.state.search.loading}/>
           <Homepage 
             workers = {this.state.workers}
+            searchState={this.state.search}
+            handleChange1 = {this.recieveMatches}
           />
         </header>
       </div>

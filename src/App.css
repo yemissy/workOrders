@@ -1,8 +1,7 @@
 .App {
-  background-image: url('./images/background3.jpg');
+  background-image: url('./images/background8.jpg');
   background-size: cover;
   background-attachment: fixed;
-  height: 100%;
 }
 #welcome{
   font-size: 2.5em;
@@ -10,6 +9,8 @@
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   left: 1.4em;
   top: 0em;
+  color: goldenrod;
+  font-weight: 700;
 }
 
 

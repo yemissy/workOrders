@@ -14,17 +14,29 @@
     border: solid green;
 }
 .workerDetail{
-    background-color: white;
-    box-shadow: 0.2em 0.2em 1em 0em rgb(141, 52, 52);
-    border-radius: 0.2em;
+    box-shadow: 0.1em 0.2em 0.4em 0.1em teal;
+    /* border-radius: 0.2em; */
     width: 45em;
     height: 27em;
     margin-block-start: 2em;
     margin-inline-start: 2em;
-    
+    background-color:whitesmoke;
 }
+h3{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+h4{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: medium;
+
+}
+
 .workerDetail:hover{
-    box-shadow: 0.2em 0.2em 1em 0em rgb(252, 255, 52);
+    box-shadow: 0.6em 0.4em 1.4em 0.1em teal;
+    box-sizing: content-box;
+    width: 46em;
+    height: 28em;
+    margin-inline-start: 1em;
 }
 
 .ui.small.image{
@@ -41,7 +53,6 @@
     position: relative;
     top: 1.5em;
     left: 0.6em;
-    font-family: ;
 }
 
 .WokersWorkOrders{
@@ -53,12 +64,12 @@
     position: relative;
     left: 8em;
     overflow: auto;
-
 }
 
 .singleOrder{
     border-radius: 1em;
-    background-color: palevioletred;
+    background-color:teal;
+    opacity: 0.9;
     box-shadow: 0em 0em 0.6em 0.1em rgb(152, 146, 148);
     text-align: left;
     width: 22em;

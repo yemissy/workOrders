@@ -13,13 +13,13 @@ export default function searchBar(props){
             results={props.Searchresults} 
             />
              {/* Work on Buttons sorting later */}
-            {/* <div className ="Buttons">
+            <div className ="Buttons">
                 <Button.Group>
                     <Button attached="left" toggle color='black'>Earliest</Button>
                     <Button.Or/>
-                    <Button attached="right" toggle color="blue">Latest </Button>
+                    <Button attached="right" toggle color="yellow">Latest </Button>
                 </Button.Group>
-            </div> */}
+            </div>
         </div>
     )
 }

@@ -1,11 +1,12 @@
-/* .App {
-  text-align: center;
-} */
+.App {
+  background-image: url('./images/background3.jpg');
+  background-size: contain;
+}
 #welcome{
   font-size: 2.5em;
   position: relative;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  left: 1em;
+  left: 1.4em;
   top: 0em;
 }
 

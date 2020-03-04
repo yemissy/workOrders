@@ -8,7 +8,6 @@
 #parentDiv{
     display: flex;
     flex-wrap: wrap;
-    /* border: solid yellow; */
 }
 
 #parentDiv1{
@@ -20,9 +19,8 @@
     border-radius: 0.2em;
     width: 45em;
     height: 27em;
-    margin: auto;
     margin-block-start: 2em;
-    margin-inline-start: 1.6em;
+    margin-inline-start: 2em;
     
 }
 .ui.small.image{

@@ -10,12 +10,8 @@
     flex-wrap: wrap;
 }
 
-#parentDiv1{
-    border: solid green;
-}
 .workerDetail{
-    box-shadow: 0.1em 0.2em 0.4em 0.1em teal;
-    /* border-radius: 0.2em; */
+    box-shadow: 0.1em 0.2em 0.4em 0.1em rgba(0,0,0,.4);
     width: 45em;
     height: 27em;
     margin-block-start: 2em;
@@ -32,7 +28,7 @@ h4{
 }
 
 .workerDetail:hover{
-    box-shadow: 0.6em 0.4em 1.4em 0.1em teal;
+    box-shadow: 0.6em 0.4em 1.4em 0.1em #989294;
     box-sizing: content-box;
     width: 46em;
     height: 28em;
@@ -45,7 +41,6 @@ h4{
     left: 0.7em;
     width: 8em;
     height: 8em;
-    border: 0.1em solid yellow;
 }
 .info{
     width: 20em;
@@ -68,9 +63,9 @@ h4{
 
 .singleOrder{
     border-radius: 1em;
-    background-color:teal;
+    background-color:#d4d4d5;
     opacity: 0.9;
-    box-shadow: 0em 0em 0.6em 0.1em rgb(152, 146, 148);
+    box-shadow: 0em 0em 0.6em 0.1em #989294;
     text-align: left;
     width: 22em;
     height: 14em;

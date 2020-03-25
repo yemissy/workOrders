@@ -130,7 +130,8 @@ class App extends Component {
           title: match.name,
           key: match.id,
           image:match.image[potentialMatches.indexOf(match)].urls.small
-        }))
+        })),
+        loading: true 
       }
     })
   }
@@ -140,6 +141,16 @@ class App extends Component {
     potentialMatches = data
   }
 
+  handleResultSeelect(e){
+    const {search} = e.target;
+   console.log("i'm clicking")
+   this.setState({
+     search:{
+       searchResults: search
+     }
+   })
+   console.log(search)
+  }
 
   render(){
     return (
@@ -152,7 +163,8 @@ class App extends Component {
           handleChange={this.handleInputChange}
           value={this.state.search.input}
           Searchresults={this.state.search.searchResults}
-          loading={this.state.search.loading}/>
+          loading={this.state.search.loading}
+          handleResult={this.handleResultSeelect}/>
           <Homepage 
             workers = {this.state.workers}
             searchState={this.state.search}

@@ -11,6 +11,7 @@ export default function searchBar(props){
             onSearchChange={props.handleChange} 
             value={props.value} 
             results={props.Searchresults}
+            onResultSelect={props.handleResult}
             />
              <h5 id="prompt">Search employee's name</h5>
              {/* Work on Buttons sorting later */}
@@ -18,7 +19,7 @@ export default function searchBar(props){
                 <Button.Group>
                     <Button attached="left" toggle color='black'>Earliest</Button>
                     <Button.Or/>
-                    <Button attached="right" toggle color="yellow">Latest </Button>
+                    <Button attached="right" toggle color="grey">Latest </Button>
                 </Button.Group>
             </div>
         </div>
